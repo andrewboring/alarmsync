@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPOPATH=/var/nginx/html
-MIRROR=http://upstream.a10g.com
+MIRROR=http://upstream.example.com
 #MIRROR=http://fl.us.mirror.archlinuxarm.org
 ARCH=armv7h
 DATE=$(date +%Y%m%d)
@@ -10,8 +10,8 @@ DATE=$(date +%Y%m%d)
 # Local constructed paths should look like this:
 # ${REPOPATH}/current/${ARCH}
 # ${REPOPATH}/${DATE}/${ARCH}
-# /var/nginx/deel/current/armv7
-# /var/nginx/deel/20180828/armv7
+# /var/nginx/html/current/armv7
+# /var/nginx/html/20180828/armv7
 
 # Remote paths should look like::
 # ${MIRROR/${ARCH}
