@@ -57,6 +57,7 @@ Usage: ./alarmsync [OPTIONS]
 ```
 
 Examples:
+
 `alarmsync.sh -s 		   # Checks mirror, syncs if needed, repoints **current** to newly created repository.`  
 `alarmsync.sh -l			   # Shows current mirror snapshots, and current current / prod links.`  
 `alarmsync.sh -u release 20180827   # Updates the $REPOPATH/release symlink to $REPOPATH/20180827`  
