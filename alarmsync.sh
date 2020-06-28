@@ -1,10 +1,19 @@
 #!/bin/bash
 
-REPOPATH=/var/nginx/html
-MIRROR=http://upstream.example.com
-#MIRROR=http://fl.us.mirror.archlinuxarm.org
-ARCH=armv7h
+REPOPATH=.
+#MIRROR=http://upstream.example.com
+MIRROR=http://fl.us.mirror.archlinuxarm.org
+#ARCH=armv7h
 DATE=$(date +%Y%m%d)
+
+
+get_arch() {
+	if [[ -z "${ARCH}" ]]; then
+		echo "No architecture defined. Must be one of armv6h, armv7h, or aarch64"
+		exit 1
+	fi
+}
+
 
 
 # Local constructed paths should look like this:
@@ -102,8 +111,13 @@ update () {
 
 
 while [ "$1" != "" ]; do
+#for arg in "$@"; do
 	case $1 in 
-		-s | --sync )	sync
+		-s | --sync )	
+				shift
+				export ARCH=$1
+				get_arch
+				sync
 				;;
 		-u | --update-link )
 				shift
