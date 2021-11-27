@@ -39,7 +39,7 @@ Your directory structure should end up looking something like this:
 ````
 
 The *current* symlink should always point to the latest Arch version (newest date).   
-The *release* symlink should always point to the current prodction release from Deel Media the RPis should sync with.  
+The *release* symlink should always point to the current production release the RPis should sync with.  
 The *current* symlink will always be repointed to latest Arch if a new version is found/downloaded.  
 The *release* symlink can be updated using this script (see below) or manually using `ln -s`.  
 
